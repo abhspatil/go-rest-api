@@ -1,0 +1,20 @@
+syntax = "proto3";
+
+package protos;
+option go_package = "./protos";
+
+import "google/protobuf/timestamp.proto";
+
+enum Status {
+  ACTIVE = 0;
+  INACTIVE = 1;
+}
+  
+
+message Users{
+    string fullname = 1; 
+    int32  age = 2;
+    Status status = 3;
+    google.protobuf.Timestamp created_at = 4;
+}
+
